@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.rizki.JakarteKite">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Jakartanye Kite"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Splash Screen -->
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:theme="@style/SplashScreen"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/SplashScreen">
+        </activity>
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:theme="@style/SplashScreen"/>
+
+        <!-- Dashboard Activity -->
+        <activity
+            android:name=".activity.DashboardActivity"
+            android:theme="@style/SplashScreen">
+        </activity>
+
+        <!-- Sudut Activity -->
+        <activity android:name=".activity.SudutActivity"
+            android:label="CRUD Sudut Ruang Jakarte"
+            android:parentActivityName=".activity.DashboardActivity"/>
+
+        <!-- List Foto Activity -->
+        <activity
+            android:name=".activity.ListFotoActivity"
+            android:label="Sudut Ruang Jakarte"
+            android:parentActivityName=".activity.SudutActivity" />
+
+        <!-- About Activity -->
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="Tentang Kite"
+            android:parentActivityName=".activity.DashboardActivity"/>
+
+    </application>
+
+</manifest>
